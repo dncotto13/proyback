@@ -1,0 +1,44 @@
+    <div class="row">
+
+        {{#each links}}
+            <h2>
+                {{title}}
+            </h2>
+
+            <p>
+                {{description}}
+            </p>
+
+            <h2>
+                {{uploadedfile}}
+            </h2>
+
+            <h3>
+                {{city}}
+            </h3>
+
+            <h3>
+                {{barrio}}
+            </h3>
+
+
+{{!-- PENDIENTE DE ACABAR, DA FALLO --}}
+{{!--        <p>
+            {{timeago created_at}}
+        </p> --}}
+            
+            <h3>
+                {{state}}
+            </h3>
+
+            <a href="/links/delete/{{id}}" class="btn btn-danger">Eliminar</a>
+            <a href="/links/edit/{{id}}" class="btn btn-secondary">Editar</a>
+
+        {{else}}
+            <div>
+                <p>No hay incidencias guardadas</p>
+                <a href="/links/add">¡Crea una!</a>
+            </div>
+
+        {{/each}}
+    </div>
